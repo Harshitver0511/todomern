@@ -127,7 +127,7 @@ const del =async(req,res)=>{
     if(!errors.isEmpty()){
         return res.status(401).json({message: 'todo id is required',"errors":errors.mapped()})
     }
-    try{
+    try{ 
         const todo = await Todo.findOneAndDelete({
             _id:req.body._id,
             UserId:req.UserId,

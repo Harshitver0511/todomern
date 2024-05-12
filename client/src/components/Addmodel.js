@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function Addmodel() {
+function Addmodel({setRefresh}) {
     const [todo, setTodo] = useState('')
     function getTokens(){
         const user =  localStorage.getItem('user')
@@ -31,6 +31,7 @@ function Addmodel() {
             // window.location.href = '/home'
 
             toast.success('Todo added successfully')
+            setRefresh( new Date())
         })
         .catch((err)=>{
             console.log(err)

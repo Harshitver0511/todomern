@@ -18,7 +18,7 @@ router.route('/').get(getAllTasks).post(RegisterSchema,register)
 router.route('/login').post(LoginSchema,login)
 router.route('/todo').get(AuthMiddlewares,fetchTodo)
 router.route('/done').post(AuthMiddlewares,[check("_id","Todo is  is required").exists()],isDone)
-router.route('/delete').delete(AuthMiddlewares,[check("_id","Todo id  is  is required").exists()],del)
+router.route('/delete').post(AuthMiddlewares,[check("_id","Todo id  is  is required").exists()],del)
 
 router.route('/create').post(AuthMiddlewares,[check("desc","Tod desc is required").exists()],todo)   
 
