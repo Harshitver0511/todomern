@@ -20,7 +20,7 @@ function Addmodel({setRefresh}) {
       e.preventDefault()
       console.log(todo)
       let token = getTokens()
-      axios.post('http://localhost:5000/api/create',{desc:todo},{
+      axios.post('https://todomern-z3n3.onrender.com/api/create',{desc:todo},{
             headers:{
                 auth:token
             }

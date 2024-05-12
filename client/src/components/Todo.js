@@ -16,7 +16,7 @@ function Todo({id,todo,setRefresh,isdone}) {
    const handleDelete = async () => {
     try {
       const token = getTokens();
-      const response = await axios.post('http://localhost:5000/api/delete',{_id:id}, {
+      const response = await axios.post('https://todomern-z3n3.onrender.com/api/delete',{_id:id}, {
         headers: {
           auth: token,
         },
@@ -29,7 +29,7 @@ function Todo({id,todo,setRefresh,isdone}) {
  const handleDone = async () => {
     try {
       const token = getTokens();
-      const response = await axios.post('http://localhost:5000/api/done', { _id: id }, {
+      const response = await axios.post('https://todomern-z3n3.onrender.com/api/done', { _id: id }, {
         headers: {
           auth: token,
         },

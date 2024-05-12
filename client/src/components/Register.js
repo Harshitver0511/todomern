@@ -16,7 +16,7 @@ function Register() {
   function handleSubmit(e){
     e.preventDefault()
     console.log(form)
-    axios.post('http://localhost:5000/api', form)
+    axios.post('https://todomern-z3n3.onrender.com/api', form)
     .then(res => {
       setError(null)
       console.log(res)

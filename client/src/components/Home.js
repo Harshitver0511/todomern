@@ -32,7 +32,7 @@ function Home() {
       // Assuming getTokens() returns a Promise or the token itself
       const token = await getTokens();
   
-      const response = await axios.get('http://localhost:5000/api/todo', {
+      const response = await axios.get('https://todomern-z3n3.onrender.com/api/todo', {
         headers: {
           auth: token,
         },
